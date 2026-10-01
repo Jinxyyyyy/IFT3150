@@ -39,7 +39,11 @@ jobs:
             echo "theme:" >> mkdocs.yml
             echo "  name: material" >> mkdocs.yml
             echo "docs_dir: docs" >> mkdocs.yml
+            echo "nav:" >> mkdocs.yml
+            echo "  - Accueil: index.md" >> mkdocs.yml
+            echo "  - Suivi de Projet: suivi.md" >> mkdocs.yml
           fi
+
 
       - name: Build Site
         run: mkdocs build
