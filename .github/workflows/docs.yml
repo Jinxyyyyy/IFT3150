@@ -24,13 +24,24 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs mkdocs-material
+          # Si le template a un fichier requirements.txt, décommentez la ligne suivante :
+          # pip install -r requirements.txt
+
+      - name: Build Site
+        run: mkdocs build
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './docs'
+          path: './site'  # <-- C'est ici que le template génère votre site HTML !
 
       - name: Deploy to GitHub Pages
         id: deployment
@@ -38,6 +49,7 @@ jobs:
 
       - name: Afficher le lien du site
         run: |
-          echo "### 🎉 Votre site est en ligne !" >> $GITHUB_STEP_SUMMARY
-          echo "Lien d'accès : ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+          echo "### 🎉 Votre suivi de projet IFT3150 est en ligne !" >> $GITHUB_STEP_SUMMARY
+          echo "Lien d'accès : ${{ steps.deployment.outputs.page_url }}suivi/" >> $GITHUB_STEP_SUMMARY
+
 
