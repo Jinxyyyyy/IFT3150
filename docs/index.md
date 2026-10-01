@@ -71,8 +71,8 @@ title: Vue d'ensemble du projet
 !!! info
     Le suivi complet est disponible dans la page [Suivi de projet](suivi.md).
 
-| Activités                      | Début       | Fin          | Livrable                                   | Statut      |
-|--------------------------------|-------------|--------------|--------------------------------------------|-------------|
-| Ouverture de projet            | 7 septembre | 18 septembre | Proposition de projet/Définition des taches | ✅ Terminé  |
-| Études préliminaires           | 4 mai       | 22 mai       | Document d'analyse                         | 🔄 En cours |
-| Présentation + Rapport         | 7 aout      | 14 aout      | Présentation + Rapport                     | ⏳ À venir  |
+| Activités              | Début        | Fin          | Livrable                                    | Statut      |
+|------------------------|--------------|--------------|---------------------------------------------|-------------|
+| Ouverture de projet    | 23 aout      | 18 septembre | Proposition de projet/Définition des taches | ✅ Terminé  |
+| Codage interface       | 18 septembre | -            | Fichier de code                             | 🔄 En cours |
+| Présentation + Rapport | -            | -            | Présentation + Rapport                      | ⏳ À venir  |
