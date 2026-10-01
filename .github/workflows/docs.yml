@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Déclenche le déploiement quand vous poussez sur la branche principale
+      - main
 
 permissions:
   contents: read
@@ -30,7 +30,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # Laisse '.' si vos fichiers HTML sont directement à la racine
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
@@ -40,12 +40,4 @@ jobs:
         run: |
           echo "### 🎉 Votre site est en ligne !" >> $GITHUB_STEP_SUMMARY
           echo "Lien d'accès : ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
-Use code with caution.
-3. Enregistrer et lancer (Commit)
-1. En haut à droite de l'écran, cliquez sur le bouton vert "Commit changes..." (Valider les modifications).
-2. Une petite fenêtre s'ouvre, cliquez à nouveau sur le bouton vert "Commit changes".
-Et après ?
-Dès que vous aurez cliqué sur Commit, GitHub va automatiquement créer le dossier .github/workflows/docs.yml pour vous et lancer le déploiement.
-Une fois le commit validé, cliquez sur l'onglet Actions tout en haut de votre écran.
-• Est-ce que vous voyez une pastille orange qui tourne avec le message "Deploy to GitHub Pages" ?
-• Si oui, dites-le moi dès qu'elle devient verte pour que l'on regarde le lien ensemble !
+
