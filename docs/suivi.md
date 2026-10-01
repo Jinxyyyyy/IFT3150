@@ -18,21 +18,21 @@ title: Suivi du projet
 ## Semaine 1 (23–29 aout)
 
 !!! abstract "Confirmation projet"
-    - [x] Rencontre avec l'equipe de la FAAQ et Louis-Edouard
+    - [x] Rencontre avec l'équipe de la FAAQ et Louis-Edouard
     - [x] Confirmation par courriel du projet par Louis
 
 
 ## Semaine 2 (30 aout– 5 septembre)
 !!! abstract "Contrat de la FAAQ et onboarding"
     - [x] Configuration de ma cle SSH
-    - [x] Signature du contrat et conditions generales
-    - [] Acceptation de ma cle par la FAAQ
+    - [x] Signature du contrat et conditions générales
+    - [] Acceptation de ma clé par la FAAQ
 
 
 ## Semaine 3 (6–12 septembre)
-!!! abstract "Comprehenseion de l'architecture et configuration"
+!!! abstract "Compréhension de l'architecture et configuration"
     - [x] Reunion d'explication de l'architecture
-    - [x] Acceptation de ma cle par la FAAQ
+    - [x] Acceptation de ma clé par la FAAQ
     - [x] Installation de MariaDB
     - [] Installation des microservices localement
 
@@ -51,7 +51,7 @@ title: Suivi du projet
 !!! abstract "Configuration du logiciel"
 
 - [] Installation des microservices localement
-- [x] Rencontre avec Louis pour potentiellement change de projet
+- [x] Rencontre avec Louis pour potentiellement changé de projet
 - 
 ### Objectifs de la période
 - Clarifier la problématique
@@ -69,7 +69,7 @@ title: Suivi du projet
 
 !!! info "Décisions orientation projet "
     - Abandon de l’approche de rouler tout les microservices jugée trop complexe
-    - Possiblement changer de projet en fonction de la methode de travail choisie par la FAAQ
+    - Possiblement changer de projet en fonction de la méthode de travail choisie par la FAAQ
 
 ### Difficultés rencontrées
 
