@@ -39,6 +39,11 @@ jobs:
             echo "theme:" >> mkdocs.yml
             echo "  name: material" >> mkdocs.yml
             echo "docs_dir: docs" >> mkdocs.yml
+            echo "markdown_extensions:" >> mkdocs.yml
+            echo "  - admonition" >> mkdocs.yml
+            echo "  - pymdownx.details" >> mkdocs.yml
+            echo "  - pymdownx.tasklist:" >> mkdocs.yml
+            echo "      custom_checkbox: true" >> mkdocs.yml
             echo "nav:" >> mkdocs.yml
             echo "  - Accueil: index.md" >> mkdocs.yml
             echo "  - Suivi de Projet: suivi.md" >> mkdocs.yml
