@@ -24,21 +24,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: pip install mkdocs mkdocs-material
-
-      - name: Build Site
-        run: mkdocs build
-
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './site' # Dossier généré par MkDocs contenant ton index.html final
+          # On prend directement ton dossier 'site' présent dans ton Pycharm
+          path: './site' 
 
       - name: Deploy to GitHub Pages
         id: deployment
