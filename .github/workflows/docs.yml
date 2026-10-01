@@ -33,15 +33,12 @@ jobs:
         run: pip install mkdocs mkdocs-material
 
       - name: Build Site
-        # On dit explicitement à MkDocs de travailler dans le dossier du template
-        working-directory: ./template-projet
         run: mkdocs build
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # On cible le dossier compilé généré à l'intérieur du sous-dossier
-          path: './template-projet/site'
+          path: './site' # MkDocs génère le site HTML ici à la racine
 
       - name: Deploy to GitHub Pages
         id: deployment
@@ -51,6 +48,3 @@ jobs:
         run: |
           echo "### 🎉 Votre suivi de projet IFT3150 est en ligne !" >> $GITHUB_STEP_SUMMARY
           echo "Lien d'accès : ${{ steps.deployment.outputs.page_url }}suivi/" >> $GITHUB_STEP_SUMMARY
-
-
-
