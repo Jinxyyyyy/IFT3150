@@ -38,7 +38,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './site' # MkDocs génère le site HTML ici à la racine
+          path: './site' # Dossier généré par MkDocs contenant ton index.html final
 
       - name: Deploy to GitHub Pages
         id: deployment
