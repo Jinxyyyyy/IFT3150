@@ -24,11 +24,30 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install mkdocs mkdocs-material
+
+      - name: Créer le fichier mkdocs.yml manquant
+        run: |
+          if [ ! -f mkdocs.yml ]; then
+            echo "site_name: Suivi de Projet IFT3150" > mkdocs.yml
+            echo "theme:" >> mkdocs.yml
+            echo "  name: material" >> mkdocs.yml
+            echo "docs_dir: docs" >> mkdocs.yml
+          fi
+
+      - name: Build Site
+        run: mkdocs build
+
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # On prend directement ton dossier 'site' présent dans ton Pycharm
-          path: './site' 
+          path: './site'
 
       - name: Deploy to GitHub Pages
         id: deployment
@@ -37,4 +56,5 @@ jobs:
       - name: Afficher le lien du site
         run: |
           echo "### 🎉 Votre suivi de projet IFT3150 est en ligne !" >> $GITHUB_STEP_SUMMARY
-          echo "Lien d'accès : ${{ steps.deployment.outputs.page_url }}suivi/" >> $GITHUB_STEP_SUMMARY
+          echo "Lien d'accès : ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+
